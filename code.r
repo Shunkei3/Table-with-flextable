@@ -34,7 +34,7 @@ table_prep <- data %>%
 	# /*===== (1) set NA columns  =====*/
 	.[,`:=`(blank1 = NA, blank2 = NA, blank3 = NA)] %>%
 	# /*===== (2) reoder columns  =====*/
-	# in a order of columns in your desirable table
+	# in a desirable order of columns
 	.[,.(variable, 
 		blank1, mean_setosa, sd_setosa,
 		blank2, mean_versicolor, sd_versicolor,
@@ -52,7 +52,6 @@ report_table <- table_prep%>%
       as.character
         )
     )%>%
-    # add_row(.after = 4) %>%
     flextable(.) %>%
     border_remove() %>%
     delete_part(part = "header") %>%
