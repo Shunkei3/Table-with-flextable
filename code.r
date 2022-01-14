@@ -6,7 +6,7 @@ library(flextable)
 library(tidyverse)
 
 # /*=================================================*/
-#' # Example Data (let's say that you have this kind of data)
+#' # Example Data (let's say you have this kind of data)
 # /*=================================================*/
 # Ex) Calculate mean and sd for all the columns by Species
 data <- data.table(iris) %>%
